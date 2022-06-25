@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksListApp", "TasksListApp\TasksListApp.csproj", "{73C99DC4-32BB-4F12-86BF-201A0EB2ED4E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4904DCE3-C51B-46D2-BCCC-20EB00BD9AD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller.Test", "Controller.Test\Controller.Test.csproj", "{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{73C99DC4-32BB-4F12-86BF-201A0EB2ED4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73C99DC4-32BB-4F12-86BF-201A0EB2ED4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73C99DC4-32BB-4F12-86BF-201A0EB2ED4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5} = {4904DCE3-C51B-46D2-BCCC-20EB00BD9AD5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E023C1C7-AB00-422F-AE12-9F5DFDF3E8A9}

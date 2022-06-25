@@ -1,5 +1,6 @@
-﻿using Moq;
-using NUnit.Framework;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Moq;
 using TasksListApp.Controllers;
 using TasksListApp.Models;
 using TasksListApp.Services;
@@ -22,26 +23,44 @@ namespace TasksListApp.Tests.Controllers
             tasksController = new TasksController(taskServiceMock.Object, loggerMock.Object);
         }
 
-
         [Test]
         public void Get_ShouldReturnListOfTasks()
         {
             // arrange
             var expectedTasksList = new List<TaskItem>
             {
-                {new TaskItem(){Id = "id1", Title = "Test Title", IsCompleted = true} },
-                {new TaskItem(){Id = "id2", Title = "Test Title", IsCompleted = true} }
+                { new TaskItem(){ Id = "id1", Title = "Test Title", IsCompleted = true} },
+                { new TaskItem(){ Id = "id2", Title = "Test Title", IsCompleted = true} }
             };
 
             taskServiceMock
                 .Setup(i => i.GetTasks())
                 .Returns(expectedTasksList);
 
-            //act
+            // act
             var response = tasksController.Get();
+            
+            // assert
+            Assert.IsNotNull(response);
+            Assert.That(response.Value, Is.EqualTo(expectedTasksList));
+        }
+        
+        [Test]
+        public void Get_ShouldReturnNotFound_IfListEmpty()
+        {
+            // arrange
+            var expectedTasksList = new List<TaskItem> { };
 
-            //assert
-            Assert.AreEqual(expectedTasksList, response);
+            taskServiceMock
+                .Setup(i => i.GetTasks())
+                .Returns(expectedTasksList);
+
+            // act
+            var response = tasksController.Get();
+            
+            // assert
+            Assert.IsNull(response.Value);
+            Assert.That(response.Result.GetType(), Is.EqualTo(typeof(NotFoundObjectResult)));
         }
     }
 }
