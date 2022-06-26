@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksListApp", "TasksListAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4904DCE3-C51B-46D2-BCCC-20EB00BD9AD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller.Test", "Controller.Test\Controller.Test.csproj", "{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller.Test", "Controller.Test\Controller.Test.csproj", "{FF55A01D-E6B3-41B8-8B65-230EC9CB09B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

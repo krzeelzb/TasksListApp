@@ -33,3 +33,5 @@ In the console output you will see the port on which the app is running.
 
 ## Documentation
 To see the documentation of the API navigate to `https://localhost:port/swagger/index.html`.
+
+![swagger](/TasksListApp/assets/images/tux.png)
