@@ -10,7 +10,7 @@ Running application locally requires the [.NET Core SDK](https://dotnet.microsof
 
 To build and run project:
 
-1. Open the root folder and navigate to	`TasksListApp` folder, so that your path is `*\TasksListApp\TasksListApp
+1. Open the root folder and navigate to	`TasksListApp` folder, so that your path is `*\TasksListApp\TasksListApp`
 
     ```console
     cd TasksListApp
